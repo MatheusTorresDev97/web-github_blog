@@ -2,12 +2,17 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/global";
 import { defaultTheme } from "./styles/theme/defaultTheme";
 
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./AppRouter";
+
 const App = () => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyles />
-      <h1>Olá Mundo !</h1>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={defaultTheme}>
+        <GlobalStyles />
+        <AppRouter />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 
